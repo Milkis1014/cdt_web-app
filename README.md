@@ -27,9 +27,9 @@ docker ps
 ```
 
 4. **Access the services**
-Frontend: http://localhost (served by Nginx)
-Grafana: http://localhost/grafana/
-Backend API: http://localhost/api/ (_Not yet included_)
+- Frontend: http://localhost (served by Nginx)
+- Grafana: http://localhost/grafana/
+- Backend API: http://localhost/api/ (_Not yet included_)
 
 **Stopping the Service**
 ```bash
