@@ -1,0 +1,109 @@
+.sensor-dashboard {
+  display:flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(#333, 100%);
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+  flex-direction: column;
+  height:fit-content;
+  flex-wrap: wrap;
+}
+
+.sensor-tabs {
+  display: flex;
+  background: rgba(#333, 0%);
+  overflow: hidden;
+  align-items: flex-end; /* Keeps the bottom edges aligned */
+}
+
+.sensor-tab {
+  padding: 8px 8px;
+  cursor: pointer;
+  background: black;
+  opacity: 70%;
+  color: #b1e8fd;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  height: 10px; /* Default height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Pushes inactive tabs upwards */
+}
+
+.sensor-tab.active {
+  background:black;
+  opacity: 70%;
+  color: #b1e8fd;
+  height: 20px; /* Taller active tab */
+  margin-top: 0px; /* Ensures the active tab aligns with the content */
+}
+
+.sensor-tab:hover {
+  background: #666;
+}
+
+.sensor-content {
+flex-grow: 1; 
+display: flex;
+align-items: center; /* Center text/content vertically */
+justify-content: center; /* Center text/content horizontally */
+color: white;
+font-size: 18px;
+font-weight: bold;
+background: #222;
+padding: 10px;
+overflow: hidden; /* Prevents content from expanding height */
+height: 140px;
+gap: 5px;
+}
+
+/* Outer container uses CSS Grid */
+.sensor-outer-container {
+  display: grid;  /* Enables Grid layout */
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100%;
+  position: relative; 
+  gap: 10px;
+}
+
+/* Hide inactive iframe groups */
+.sensor-grafana-panel {
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+  position: absolute; /* Keeps them stacked on top of each other */
+  width: 100%;
+  height: 100%;
+  
+}
+
+/* Hide inactive iframe groups */
+.sensor-grafana-panel.hidden {
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+  
+}
+
+/* Show active iframe group */
+.sensor-grafana-panel.visible {
+  opacity: 100%;
+  z-index: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sensor-grafana-iframe-container {
+  width: 33%;
+  height: 100%;
+  border:none;
+  
+}
+
+

@@ -1,0 +1,93 @@
+.occupant-dashboard {
+  width: 100%;
+  height: 100%;
+  background: rgba(#333, 100%);
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+  flex-direction: column;
+  height:fit-content;
+}
+
+.occupant-tabs {
+  display: flex;
+  background: rgba(#333, 0%);
+  overflow: hidden;
+  align-items: flex-end; /* Keeps the bottom edges aligned */
+}
+
+.occupant-tab {
+  padding: 8px 8px;
+  cursor: pointer;
+  background: black;
+  opacity: 70%;
+  color: #b1e8fd;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  height: 10px; /* Default height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Pushes inactive tabs upwards */
+}
+
+.occupant-tab.active {
+  background:black;
+  opacity: 70%;
+  color: #b1e8fd;
+  height: 20px; /* Taller active tab */
+  margin-top: 0px; /* Ensures the active tab aligns with the content */
+}
+
+.occupant-tab:hover {
+  background: #666;
+}
+
+.occupant-content {
+flex-grow: 1; /* Makes it fill remaining space */
+display: flex;
+align-items: center; /* Center text/content vertically */
+justify-content: center; /* Center text/content horizontally */
+color: white;
+font-size: 18px;
+font-weight: bold;
+background: #222;
+padding: 10px;
+overflow: hidden; /* Prevents content from expanding height */
+position: relative; 
+height: 140px;
+}
+
+/* Outer container uses CSS Grid */
+.occupant-outer-container {
+  display: grid;  /* Enables Grid layout */
+  width: 100%;
+  height: 100%;
+  position: relative; 
+}
+
+/* Both iframes are placed in the same grid cell (they overlap) */
+.occupant-grafana-iframe-container {
+  grid-area: 1 / 1 / 2 / 2;  /* Places both iframes in the same cell */
+  width: 100%;
+  height: 90%;
+  border: none;
+
+}
+
+/* Hide inactive iframe */
+.occupant-grafana-iframe-container.hidden {
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Show active iframe */
+.occupant-grafana-iframe-container.visible {
+  opacity: 1;
+  z-index: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease-in-out;
+}

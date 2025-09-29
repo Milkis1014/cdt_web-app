@@ -1,0 +1,262 @@
+#root {
+  max-width: 1280px;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.unity-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background: #231F20;*/
+}
+
+#unity-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+
+
+.dynamic-grafana-iframe-container {
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow: hidden;
+}
+
+/* Hide inactive iframe */
+.dynamic-grafana-iframe-container.hidden {
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+  height:50;
+}
+
+/* Show active iframe */
+.dynamic-grafana-iframe-container.visible {
+  opacity: 1;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.staticDashboard-container {
+  position: fixed;
+  bottom: 0%;
+  width: 90vw;
+  /*background: rgba(177, 232, 253, 0.4);*/
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-areas: "energy occupant environmental";
+  /*gap: 5px;*/
+  /*padding: 5px;*/
+}
+
+/* Individual sections */
+.energy {
+  grid-area: energy;
+  background: #000000;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.occupant {
+  grid-area: occupant;
+  background: #000000;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.environmental {
+  grid-area: environmental; /* Grouped section */
+  background: #000000;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.logs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 20%;
+  height: 40%;
+  background: rgba(0, 0, 0, 0.5); /* Slightly more visible background */
+  z-index: 1;
+  opacity: 100%;
+  color: white;
+  font-size: 11px;
+  font-weight: normal;
+  cursor: pointer;
+  overflow-y: auto; /* Allow scrolling */
+  border-radius: 5px;
+  padding: 8px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.logs-header {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 4px;
+}
+
+.log-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Stack logs vertically */
+}
+
+.log-entry {
+  display:flex;
+  padding: 4px 6px;
+  background-color: #333; /* Dark background for each log entry */
+  width: 100%;
+  gap: 100px;
+  word-wrap: break-word; /* Ensure long messages don't overflow */
+}
+
+.debug-panel {
+  background-color: #222;
+  color: #0f0; /* Green text for readability */
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  font-family: monospace;
+  white-space: pre-wrap; /* Ensures JSON formatting is readable */
+  max-height: 300px; /* Limits height */
+  overflow-y: auto; /* Adds scroll if JSON is long */
+}
+
+
+/* LOGIN CSS */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  margin-top: 20%;
+  background-color: #f9f9f9;
+}
+
+.login-form h2 {
+  margin-bottom: 1rem;
+}
+
+.login-form div {
+  margin-bottom: 1rem;
+}
+
+.login-form input {
+  padding: 0.5rem;
+  width: 200px;
+  margin-top: 0.2rem;
+}
+
+.login-form button {
+  padding: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+/* 👇 Add this to App.css or Login.css */
+.login-background {
+  background-image: url('../assets/images/waves.png'); /* ✅ Adjust if your path differs */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px; /* Adds spacing between groups */
+}
+
+.text-input label {
+  margin-bottom: 6px; /* Adds space between label and input */
+  color: black;
+}
+
+.login-header {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  z-index: 10;
+}
+
+.login-header h1 {
+  font-size: 128px;
+  font-weight: bold;
+  color: white; /* or black depending on your background */
+  margin: 0;
+}

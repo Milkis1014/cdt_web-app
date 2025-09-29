@@ -1,0 +1,24 @@
+
+
+services:
+  web:
+    image: nginx:latest
+    container_name: my-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./web-app/client/dist:/usr/share/nginx/html
+      - ./nginx/conf/nginx_docker.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf/mime.types:/etc/nginx/mime.types
+    restart: unless-stopped
+  grafana:
+    image: grafana/grafana:latest
+    container_name: my-grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana/data:/var/lib/grafana
+      - ./grafana/conf/custom.ini:/usr/share/grafana/conf/custom.ini
+    environment:
+      - GF_PATHS_CONFIG=/usr/share/grafana/conf/custom.ini
+    restart: unless-stopped

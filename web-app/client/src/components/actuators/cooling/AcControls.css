@@ -1,0 +1,76 @@
+
+.ac-controls-panel {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    border-radius: 8px;
+    gap: 10px;
+  }
+  
+  .ac-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  /* Toggle Switch Styling */
+  .ac-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .ac-toggle input {
+    display: none;
+  }
+  
+  .ac-toggle .slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .ac-toggle .slider::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+  }
+  
+  .ac-toggle input:checked + .slider {
+    background-color: #007bff;
+  }
+  
+  .ac-toggle input:checked + .slider::before {
+    transform: translateX(20px);
+  }
+  
+  .toggle-label {
+    font-weight: bold;
+  }
+  
+  /* Execute Button */
+  .ac-execute-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .ac-execute-button:hover {
+    background-color: #218838;
+  }
