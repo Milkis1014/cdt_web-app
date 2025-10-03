@@ -1,16 +1,13 @@
-
-
 services:
   web:
-    image: nginx:latest
+    build:
+      context: .
+      dockerfile: Dockerfile   # the multi-stage one you wrote
     container_name: my-nginx
     ports:
       - "80:80"
-    volumes:
-      - ./web-app/client/dist:/usr/share/nginx/html
-      - ./nginx/conf/nginx_docker.conf:/etc/nginx/nginx.conf
-      - ./nginx/conf/mime.types:/etc/nginx/mime.types
     restart: unless-stopped
+
   grafana:
     image: grafana/grafana:latest
     container_name: my-grafana
