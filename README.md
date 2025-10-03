@@ -31,6 +31,15 @@ docker ps
 - Grafana: http://localhost/grafana/
 - Backend API: http://localhost/api/ (_Not yet included_)
 
+5. **Login to Web Application**
+<p align="center">
+    <img src="screenshots/login.png" alt="login interface" width="600"/>
+</p> 
+
+⚠️ **Note:**  
+The login interface is **not connected to authentication**.  
+You can enter any username and password — as long as both fields are filled, the application will proceed.
+
 **Stopping the Service**
 ```bash
 docker-compose down
