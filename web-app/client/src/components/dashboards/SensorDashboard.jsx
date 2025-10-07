@@ -8,19 +8,19 @@ const SensorDashboard = () => {
   // Data Mapping for Each Tab and Sensor Type (Variable iframe counts)
   const sensorData = {
     average: {
-      temperature: `${window.location.origin}/grafana/d-solo/begll92csbitcd/facility01?panelId=11`,
-      humidity: `${window.location.origin}/grafana/d-solo/begll92csbitcd/facility01?panelId=15`,
-      co2: `${window.location.origin}/grafana/d-solo/begll92csbitcd/facility01?panelId=14`,
+      temperature: `${window.location.origin}/grafana/d-solo/ded7weu2gepdsa/rdmo?panelId=29`,
+      humidity: `${window.location.origin}/grafana/d-solo/ded7weu2gepdsa/rdmo?panelId=15`,
+      co2: `${window.location.origin}/grafana/d-solo/ded7weu2gepdsa/rdmo?panelId=14`,
     },
     histogram: {
-      temperature: `${window.location.origin}/grafana/d-solo/begll92csbitcd/facility01?panelId=12`,
-      humidity: `${window.location.origin}/grafana/d-solo/begll92csbitcd/facility01?panelId=18`,
-      co2: `${window.location.origin}/grafana/d-solo/begll92csbitcd/facility01?panelId=16`,
+      temperature: `${window.location.origin}/grafana/d-solo/ded7weu2gepdsa/rdmo?panelId=12`,
+      humidity: `${window.location.origin}/grafana/d-solo/ded7weu2gepdsa/rdmo?panelId=18`,
+      co2: `${window.location.origin}/grafana/d-solo/ded7weu2gepdsa/rdmo?panelId=16`,
     },
     range: {
-      temperature: `${window.location.origin}/grafana/d-solo/begll92csbitcd/facility01?panelId=13`,
-      humidity: `${window.location.origin}/grafana/d-solo/begll92csbitcd/facility01?panelId=19`,
-      co2: `${window.location.origin}/grafana/d-solo/begll92csbitcd/facility01?panelId=20`,
+      temperature: `${window.location.origin}/grafana/d-solo/ded7weu2gepdsa/rdmo?panelId=13`,
+      humidity: `${window.location.origin}/grafana/d-solo/ded7weu2gepdsa/rdmo?panelId=19`,
+      co2: `${window.location.origin}/grafana/d-solo/ded7weu2gepdsa/rdmo?panelId=20`,
     },
   };
 
