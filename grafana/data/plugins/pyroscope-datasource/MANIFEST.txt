@@ -1,0 +1,36 @@
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+{
+  "manifestVersion": "2.0.0",
+  "signatureType": "community",
+  "signedByOrg": "pyroscope",
+  "signedByOrgName": "pyroscope",
+  "rootUrls": [],
+  "plugin": "pyroscope-datasource",
+  "version": "1.2.0",
+  "time": 1678724448616,
+  "keyId": "7e4d0c6a708866e7",
+  "files": {
+    "plugin.json": "efb82ef996e440facb8e46c09d453079472081ec3266519849737109afb9d029",
+    "img/logo.svg": "fc18a2997bfd011e2b12c3d07dfff05aac15923d6742c7a5d579dc13a526c341",
+    "LICENSE": "62c1d9986042f92bc7c1e8a3b98d530628917639b56dcfc5582fcf014994c71c",
+    "module.js": "a4d65e962ba9096ff7ef8dde3b7257d504e7e65296745da7b6968da74edba65b",
+    "README.md": "17930bffd96abd3da6b6ec0fc5851547c3fbb0fa0ae091716225b342963d1356",
+    "CHANGELOG.md": "719047d41b8a9469b3d5a3c8a6a2b6fcc75ccff55f622e82773ff118b57850b9",
+    "module.js.LICENSE.txt": "0d8f66cd4afb566cb5b7e1540c68f43b939d3eba12ace290f18abc4f4cb53ed0",
+    "module.js.map": "260cc1e4e04441ee0bb50a6718a093e0a29b3a23f1f750a654fa70f0ef0f94cd"
+  }
+}
+-----BEGIN PGP SIGNATURE-----
+Version: OpenPGP.js v4.10.10
+Comment: https://openpgpjs.org
+
+wrkEARMKAAYFAmQPTWAAIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
+cIhm52DEAgkBStBVVZsdIqsrRmOx5GoPsoZu+g47Cyuug8hKwYoEFktO1Zdq
+6ntw7MC2QO8bptvsEV1b+q+eOa9lJBL0fTGCmVYCCQGP6B38dsKjTB09pLvD
+yK8Q5IqsDbaYetJUiAq0ZSKzCQuvYfhHbwLSOXHTEH03Xf+oJPskMmCyV7sV
+s7cxZq87Wg==
+=MqvA
+-----END PGP SIGNATURE-----
