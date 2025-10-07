@@ -18,6 +18,10 @@ services:
       - ./grafana/conf/custom.ini:/usr/share/grafana/conf/custom.ini
     environment:
       - GF_PATHS_CONFIG=/usr/share/grafana/conf/custom.ini
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=123123drink
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
     restart: unless-stopped
 
   telegraf:
